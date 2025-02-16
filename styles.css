@@ -114,6 +114,9 @@ body{
 }
 
 @media(max-width: 458px){
+    #calculate{
+        padding: 30px 80px;
+    }
     input{
         display: flex;
         width: 98%;
