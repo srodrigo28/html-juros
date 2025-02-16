@@ -13,22 +13,28 @@
         <div id="calculate">
             
             <h2>Juros Compostos</h2>
+            <span id="teste"></span>
             
             <div id="input_box">
                 
                 <div class="input-field">
                     <label for="value">Valor Inicial (capital):</label>
-                    <input type="text" id="value">
+                    <input type="text" id="value" class="money input">
                 </div>
 
                 <div class="input-field">
-                    <label for="fee">Taxa de juros a.b:</label>
-                    <input type="text" id="fee">
+                    <label for="fee">Taxa de juros ao mês:</label>
+                    <div class="box-taxa">
+                        <input type="text" id="fee" class="taxa input">
+                        <span class="percent2">%</span>
+                    </div>
                 </div>
                 
                 <div class="input-field">
-                    <label for="time">Tempo de Rendimento a.m:</label>
-                    <input type="text" id="time">
+                    <label for="time">Tempo de Rendimento em meses:</label>
+                    <div class="box-taxa">
+                    <input type="text" id="time" class="letra input">
+                    <span class="percent">meses</span>
                 </div>
             </div>
             <div id="result">
@@ -36,7 +42,20 @@
                 <span id="total"> R$ 0,00</span>
             </div>
             <button id="btnCalcular"> Calcular </button>
+            
         </div>
     </main>
+
+     <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>
+        $('.money').mask("#.##0,00", { reverse: true });
+        $('.taxa').mask('0', { reverse: true });
+        $('.letra').mask('00');
+    </script>
 </body>
 </html>

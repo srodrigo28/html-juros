@@ -1,18 +1,33 @@
 
+const capital = document.getElementById('value')
+const taxa = document.getElementById('fee')
+const tempo = document.getElementById('time')
+
+function limparPontos(valor){
+    let valorComPonto = valor.replace('.', '').replace(',', '.');
+    return valorComPonto
+}
+
 document.getElementById('calculate').addEventListener('click', function(){
-    const value = document.getElementById('value').value
-    const fee = (document.getElementById('fee').value) / 100;
-    const time = document.getElementById('time').value;
 
-    const total = value * (1 + fee) ** time;
+    const capitalT = limparPontos(capital.value)
+    const taxaT = limparPontos(taxa.value) / 100
+    const tempoT = limparPontos(tempo.value)
 
-    document.getElementById('total').innerHTML = (moeda(total))
+    console.log(tempoT)
+
+   const total = capitalT * (1 + taxaT) ** tempoT;
+
+   document.getElementById('total').innerHTML = moeda(total)
 })
-
 
 function moeda(valor){
     return valor.toLocaleString('pt-br', {
         style: 'currency',
         currency: 'BRL'
     });
+}
+
+function limparLetras(valor){
+    textoLimpo = texto.replace(/[a-zA-Z]/g, '')
 }
