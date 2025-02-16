@@ -119,7 +119,10 @@ body{
     }
     input{
         display: flex;
-        width: 98%;
+        width: 100%;
         flex-direction: column;   
+    }
+    label{
+        font-size: 12px;
     }
 }
