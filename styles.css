@@ -112,3 +112,11 @@ body{
         padding: 10px;
     }
 }
+
+@media(max-width: 458px){
+    input{
+        display: flex;
+        width: 98%;
+        flex-direction: column;   
+    }
+}
