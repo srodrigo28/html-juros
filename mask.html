@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <form>
+        <div>
+            <label for="tel"> CPF/CNPJ </label>
+            <input type="text" id="tel" />
+        </div>
+    
+        <div>
+            <label for="doc"> CPF/CNPJ </label>
+            <input type="text" id="doc" />
+        </div>
+    </form>
+
+
+    <style>
+        body {
+            height: 100vh;
+            background: #FFCC00;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div {
+
+            font-family: Arial;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input {
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 5px;
+            width: 250px;
+            font-size: 1.3em;
+            border: 0;
+            background: gray;
+        }
+        
+        form{
+            width: 80%;
+            max-width: 350px;
+            font-size: 20px;
+            cursor: point;
+            color: #fff;
+            padding: 80px;
+            border-radius: 8px;
+            background-color: #262626;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.323);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 25px
+        }
+        form input{
+            width: 100%;
+        } 
+    </style>
+    <script src="https://cdn.rawgit.com/lagden/vanilla-masker/lagden/build/vanilla-masker.min.js"></script>
+    <script defer src="./mask.js"></script>
+</body>
+
+</html>
