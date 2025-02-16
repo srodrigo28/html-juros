@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
+    <title>Calcular</title>
+</head>
+<body>
+    <main id="container">
+        <div id="calculate">
+            
+            <h2>Juros Compostos</h2>
+            
+            <div id="input_box">
+                
+                <div class="input-field">
+                    <label for="value">Valor Inicial (capital):</label>
+                    <input type="text" id="value">
+                </div>
+
+                <div class="input-field">
+                    <label for="fee">Taxa de juros a.b:</label>
+                    <input type="text" id="fee">
+                </div>
+                
+                <div class="input-field">
+                    <label for="time">Tempo de Rendimento a.m:</label>
+                    <input type="text" id="time">
+                </div>
+            </div>
+            <div id="result">
+                <h4>Resultado: </h4>
+                <span id="total"> R$ 0,00</span>
+            </div>
+            <button id="btnCalcular"> Calcular </button>
+        </div>
+    </main>
+</body>
+</html>
