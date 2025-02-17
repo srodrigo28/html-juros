@@ -8,10 +8,16 @@ function limparPontos(valor){
     return valorComPonto
 }
 
+function limparPontos2(valor){
+    let valorComPonto = valor.replace('.', '').replace('.', '.');
+    return valorComPonto
+}
+
+
 document.getElementById('calculate').addEventListener('click', function(){
 
     const capitalT = limparPontos(capital.value)
-    const taxaT = limparPontos(taxa.value) / 100
+    const taxaT = limparPontos2(taxa.value) / 100
     const tempoT = limparPontos(tempo.value)
 
     console.log(tempoT)
