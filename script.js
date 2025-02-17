@@ -9,7 +9,7 @@ function limparPontos(valor){
 }
 
 function limparPontos2(valor){
-    let valorComPonto = valor.replace('.', '').replace('.', '.');
+    let valorComPonto = valor.replace('.', '').replace(',', '');
     return valorComPonto
 }
 
@@ -17,12 +17,12 @@ function limparPontos2(valor){
 document.getElementById('calculate').addEventListener('click', function(){
 
     const capitalT = limparPontos(capital.value)
-    const taxaT = limparPontos2(taxa.value) / 100
+    const taxaT = taxa.value
     const tempoT = limparPontos(tempo.value)
 
     console.log(tempoT)
 
-   const total = capitalT * (1 + taxaT) ** tempoT;
+   const total = capitalT * (1 + (taxaT / 100)) ** tempoT;
 
    document.getElementById('total').innerHTML = moeda(total)
 })
