@@ -33,7 +33,7 @@ body{
     font-size: 20px;
     cursor: point;
     color: #fff;
-    padding: 80px;
+    padding: 50px;
     border-radius: 8px;
     background-color: #262626;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.323);
@@ -104,7 +104,7 @@ body{
         font-size: 30px;
     }
     #calculate{
-        padding: 30px;
+        padding: 20px 30px;
     }
     #btnCalcular{    
         font-size: 20px;
@@ -115,7 +115,7 @@ body{
 
 @media(max-width: 458px){
     #calculate{
-        padding: 30px 80px;
+        padding: 20px 30px;
     }
     input{
         display: flex;
