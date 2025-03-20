@@ -31,8 +31,8 @@
             <input id="money" type="text" class="form-control" placeholder="R$ 0,00">
         </div>
         <div class="mb-3">
-            <a href="/index.html"> <button class="btn btn-outline-success">Cadastrar</button> </a>
-            <a href="/index.html"> <button class="btn btn-outline-danger">Voltar</button> </a>
+            <button type="submit" id="cadastrar"  class="btn btn-outline-success">Cadastrar</button>
+            <button type="submit" id="voltar" class="btn btn-outline-danger">Voltar</button>
         </div>
     </form>
 
@@ -48,6 +48,29 @@
         $('#phone').mask('(00) 00000-0000');
         $('#cpf').mask('000.000.000-00', { reverse: true });
         $('#money').mask("#.##0,00", { reverse: true });
+    </script>
+
+    <script>
+        let btn_cadastrar = document.getElementById('cadastrar');
+        let btn_voltar = document.getElementById('voltar');
+
+        console.log(btn_cadastrar)
+
+        btn_cadastrar.onclick = (e) => {
+            e.preventDefault();
+
+            alert("Formulário cadastrado com sucesso!");
+            
+            window.location.href = "/";
+        }
+
+        btn_voltar.onclick = (e) => {
+            e.preventDefault();
+
+            alert("Voltando ...");
+            
+            window.location.href = "/";
+        }
     </script>
 </body>
 
